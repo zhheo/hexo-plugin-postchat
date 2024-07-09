@@ -35,7 +35,19 @@ PostChat是一个专为中小开发者与站长开发的AI增强工具，可以�
 
 ## 安装方式
 
+使用命令行工具或终端cd进入你的Hexo博客根目录。
 
+```
+cd /Users/这是一个例子/HexoDemo
+```
+
+然后在博客根目录下执行
+
+```
+npm install hexo-plugin-postchat --save
+```
+
+然后根据下面的插件配置进行配置即可。
 
 ## 插件配置
 

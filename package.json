@@ -1,0 +1,11 @@
+{
+  "name": "hexo-plugin-postchat",
+  "version": "1.0.0",
+  "description": "站点AI增强工具，实现文章摘要与知识库对话",
+  "main": "index.js",
+  "author": "张洪Heo",
+  "license": "仅用于PostChat服务",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10"
+  }
+}

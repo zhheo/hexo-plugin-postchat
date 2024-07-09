@@ -2,9 +2,13 @@ const cheerio = require('cheerio');
 
 // 仅为文章页面插入 id="postchat_postcontent" 的 div 容器
 hexo.extend.filter.register('after_post_render', function (data) {
-  data.content = '<div id="postchat_postcontent">' + data.content + '</div>';
+  // 检查页面类型是否为文章
+  if (data.layout === 'post') {
+    data.content = '<div id="postchat_postcontent">' + data.content + '</div>';
+  }
   return data;
 });
+
 
 // 为所有HTML页面插入必要的脚本和样式
 hexo.extend.filter.register('after_render:html', function (data) {
@@ -26,10 +30,10 @@ hexo.extend.filter.register('after_render:html', function (data) {
 
   const {
     enableSummary = true,
-    postSelector = "article",
+    postSelector = "#postchat_postcontent",
     title = "文章摘要",
     summaryStyle = "https://ai.tianli0.top/static/public/postChatUser_summary.min.css",
-    postURL = "*/archives/*",
+    postURL = "/^https?://[^/]+/[0-9]{4}/[0-9]{2}/[0-9]{2}/",
     blacklist = "",
     wordLimit = "1000",
     typingAnimate = true

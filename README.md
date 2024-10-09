@@ -73,6 +73,7 @@ postchat:
     blacklist: "" # 填写相关的json地址，帮助文档：https://postsummary.zhheo.com/parameters.html#tianligpt-blacklist
     wordLimit: "1000" # 危险操作！如果没有在文章摘要中开启url绑定，更改此变量损失已消耗过的key，因为你提交的内容发生了变化。（PostChat用户无影响，因为摘要数量是无限的）可以设置提交的字数限制，默认为1000字。，帮助文档：https://postsummary.zhheo.com/parameters.html#tianligpt-wordlimit
     typingAnimate: true # 智能的打字效果，模拟流处理的感觉
+    beginningText: "这篇文章介绍了" #自定义开头语，默认为"这篇文章介绍了"
   chat:
     enableAI: true # 开启PostChat智能对话，添加按钮点击对话的功能，如果你并非PostChat用户，而是仅文章摘要用户，建议关闭此功能
     backgroundColor: "#3e86f6" # 按钮背景颜色

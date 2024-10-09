@@ -9,7 +9,6 @@ hexo.extend.filter.register('after_post_render', function (data) {
   return data;
 });
 
-
 // 为所有HTML页面插入必要的脚本和样式
 hexo.extend.filter.register('after_render:html', function (data) {
   // 使用 cheerio 加载HTML内容
@@ -36,7 +35,8 @@ hexo.extend.filter.register('after_render:html', function (data) {
     postURL = "/^https?://[^/]+/[0-9]{4}/[0-9]{2}/[0-9]{2}/",
     blacklist = "",
     wordLimit = "1000",
-    typingAnimate = true
+    typingAnimate = true,
+    beginningText = "这篇文章介绍了"
   } = summary;
 
   const {
@@ -80,10 +80,11 @@ hexo.extend.filter.register('after_render:html', function (data) {
           showInviteLink: ${showInviteLink},
           userTitle: "${userTitle}",
           userDesc: "${userDesc}",
-          addButton: ${addButton}
+          addButton: ${addButton},
+          beginningText: "${beginningText}"
         };
-        </script>
-        <script data-postChat_key="${key}" src="%s"></script>
+    </script>
+    <script data-postChat_key="${key}" src="%s"></script>
   `;
 
   // 确定插入的JS文件地址
@@ -103,6 +104,6 @@ hexo.extend.filter.register('after_render:html', function (data) {
   }
 
   data = $.html();
-  
+
   return data;
 });

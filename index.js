@@ -36,7 +36,8 @@ hexo.extend.filter.register('after_render:html', function (data) {
     blacklist = "",
     wordLimit = "1000",
     typingAnimate = true,
-    beginningText = "这篇文章介绍了"
+    beginningText = "这篇文章介绍了",
+    summaryTheme = "default"
   } = summary;
 
   const {
@@ -67,6 +68,7 @@ hexo.extend.filter.register('after_render:html', function (data) {
         let tianliGPT_blacklist = '${blacklist}';
         let tianliGPT_wordLimit = '${wordLimit}';
         let tianliGPT_typingAnimate = ${typingAnimate};
+        let tianliGPT_theme = ${summaryTheme};
         var postChatConfig = {
           backgroundColor: "${backgroundColor}",
           bottom: "${bottom}",

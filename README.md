@@ -77,10 +77,11 @@ postchat:
     summaryTheme: "default" #切换文章摘要主题，详情请见 https://postchat.zhheo.com/theme.html
   chat:
     enableAI: true # 开启PostChat智能对话，添加按钮点击对话的功能，如果你并非PostChat用户，而是仅文章摘要用户，建议关闭此功能
+    userMode: "magic" # 用户模式，可选值为"magic"和"iframe"，默认为"magic"
     backgroundColor: "#3e86f6" # 按钮背景颜色
     fill: "#FFFFFF" # 按钮填充颜色
-    bottom: "16px" # 按钮底部距离
-    left: "16px" # 按钮左边距离
+    bottom: "80px" # 按钮底部距离
+    left: "20px" # 按钮左边距离
     width: "44px" # 按钮宽度
     frameWidth: "375px" # 聊天界面框架宽度
     frameHeight: "600px" # 聊天界面框架高度
@@ -89,6 +90,9 @@ postchat:
     showInviteLink: true # 显示邀请链接
     userTitle: "PostChat" # 界面标题
     userDesc: "如果你对网站的内容有任何疑问，可以来问我哦～" # 聊天界面描述
+    userIcon: "https://ai.tianli0.top/static/img/PostChat.webp" # PostChat聊天界面图标，仅在Magic模式下有效
+    defaultChatQuestions: ["你好","你是谁"] # 默认聊天问题，仅在Magic模式下有效
+    defaultSearchQuestions: ["视频压缩","设计"] # 默认搜索问题，仅在Magic模式下有效
     addButton: true # 是否显示按钮
 
 ```

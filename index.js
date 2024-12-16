@@ -54,7 +54,11 @@ hexo.extend.filter.register('after_render:html', function (data) {
     showInviteLink = true,
     userTitle = "PostChat",
     userDesc = "如果你对网站的内容有任何疑问，可以来问我哦～",
-    addButton = true
+    addButton = true,
+    userIcon = "https://ai.tianli0.top/static/img/PostChat.webp",
+    userMode = "magic",
+    defaultChatQuestions = ["你好", "你是谁"],
+    defaultSearchQuestions = ["视频压缩", "设计"]
   } = chat;
 
   // 插入脚本代码
@@ -83,7 +87,11 @@ hexo.extend.filter.register('after_render:html', function (data) {
           userTitle: "${userTitle}",
           userDesc: "${userDesc}",
           addButton: ${addButton},
-          beginningText: "${beginningText}"
+          beginningText: "${beginningText}",
+          userIcon: "${userIcon}",
+          userMode: "${userMode}",
+          defaultChatQuestions: ${JSON.stringify(defaultChatQuestions)},
+          defaultSearchQuestions: ${JSON.stringify(defaultSearchQuestions)}
         };
     </script>
     <script data-postChat_key="${key}" src="%s"></script>

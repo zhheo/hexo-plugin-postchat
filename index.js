@@ -17,8 +17,8 @@ hexo.extend.filter.register('after_render:html', function (data) {
   // 读取配置项
   const config = hexo.config.postchat || {};
 
-    // 新增 customJS 配置项
-    const customJS = config.customJS || "";
+  // 新增 customJS 配置项
+  const customJS = config.customJS || "";
 
   const {
     account = {},
@@ -64,18 +64,10 @@ hexo.extend.filter.register('after_render:html', function (data) {
     defaultSearchQuestions = ["视频压缩", "设计"]
   } = chat;
 
-  // 插入脚本代码
-  const script = `
-    <link rel="stylesheet" href="${summaryStyle}">
-    <script>
-        let tianliGPT_key = '${key}';
-        let tianliGPT_postSelector = '${postSelector}';
-        let tianliGPT_Title = '${title}';
-        let tianliGPT_postURL = '${postURL}';
-        let tianliGPT_blacklist = '${blacklist}';
-        let tianliGPT_wordLimit = '${wordLimit}';
-        let tianliGPT_typingAnimate = ${typingAnimate};
-        let tianliGPT_theme = '${summaryTheme}';
+    // 动态生成postChat配置部分
+    let postChatConfigScript = '';
+    if (enableAI) {
+      postChatConfigScript = `
         var postChatConfig = {
           backgroundColor: "${backgroundColor}",
           bottom: "${bottom}",
@@ -95,7 +87,21 @@ hexo.extend.filter.register('after_render:html', function (data) {
           userMode: "${userMode}",
           defaultChatQuestions: ${JSON.stringify(defaultChatQuestions)},
           defaultSearchQuestions: ${JSON.stringify(defaultSearchQuestions)}
-        };
+        };`;
+    }
+
+    const script = `
+    <link rel="stylesheet" href="${summaryStyle}">
+    <script>
+        let tianliGPT_key = '${key}';
+        let tianliGPT_postSelector = '${postSelector}';
+        let tianliGPT_Title = '${title}';
+        let tianliGPT_postURL = '${postURL}';
+        let tianliGPT_blacklist = '${blacklist}';
+        let tianliGPT_wordLimit = '${wordLimit}';
+        let tianliGPT_typingAnimate = ${typingAnimate};
+        let tianliGPT_theme = '${summaryTheme}';
+        ${postChatConfigScript}
     </script>
     <script data-postChat_key="${key}" src="%s"></script>
   `;

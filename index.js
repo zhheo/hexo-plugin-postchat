@@ -17,6 +17,9 @@ hexo.extend.filter.register('after_render:html', function (data) {
   // 读取配置项
   const config = hexo.config.postchat || {};
 
+    // 新增 customJS 配置项
+    const customJS = config.customJS || "";
+
   const {
     account = {},
     summary = {},
@@ -97,16 +100,20 @@ hexo.extend.filter.register('after_render:html', function (data) {
     <script data-postChat_key="${key}" src="%s"></script>
   `;
 
-  // 确定插入的JS文件地址
-  let scriptSrc;
-  if (enableAI && enableSummary) {
-    scriptSrc = "https://ai.tianli0.top/static/public/postChatUser_summary.min.js";
-  } else if (enableAI) {
-    scriptSrc = "https://ai.tianli0.top/static/public/postChatUser.min.js";
-  } else if (enableSummary) {
-    scriptSrc = "https://ai.tianli0.top/static/public/tianli_gpt.min.js";
-  } else {
-    scriptSrc = "";
+  // 优先使用自定义 JS 地址
+  let scriptSrc = customJS;
+  
+  if (!scriptSrc) {
+    // 默认逻辑保持不变
+    if (enableAI && enableSummary) {
+      scriptSrc = "https://ai.tianli0.top/static/public/postChatUser_summary.min.js";
+    } else if (enableAI) {
+      scriptSrc = "https://ai.tianli0.top/static/public/postChatUser.min.js";
+    } else if (enableSummary) {
+      scriptSrc = "https://ai.tianli0.top/static/public/tianli_gpt.min.js";
+    } else {
+      scriptSrc = "";
+    }
   }
 
   if (scriptSrc) {

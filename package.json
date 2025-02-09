@@ -1,11 +1,23 @@
 {
   "name": "hexo-plugin-postchat",
-  "version": "2.0.0",
-  "description": "站点AI增强工具，实现文章摘要与知识库对话",
+  "version": "2.1.0",
+  "description": "🤖站点AI增强工具，实现文章摘要与知识库对话",
   "main": "index.js",
   "author": "张洪Heo",
   "license": "仅用于PostChat服务",
   "dependencies": {
     "cheerio": "^1.0.0-rc.10"
-  }
+  },
+  "keywords": [
+    "hexo",
+    "plugin",
+    "tianligpt",
+    "postchat",
+    "ai"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhheo/hexo-plugin-postchat.git"
+  },
+  "homepage": "https://postchat.zhheo.com/plugin/hexo.html"
 }

@@ -6,6 +6,11 @@ npm login
 
 npm publish
 
+## 2.1.0
+
+新增 customJS 配置项支持自定义脚本地址
+优化配置生成逻辑，改进 enableAI 为 false 时的脚本插入
+
 ## 2.0.0
 PostChat支持全新的Magic模式（将默认启用）
 

@@ -94,6 +94,10 @@ postchat:
     defaultChatQuestions: ["你好","你是谁"] # 默认聊天问题，仅在Magic模式下有效
     defaultSearchQuestions: ["视频压缩","设计"] # 默认搜索问题，仅在Magic模式下有效
     addButton: true # 是否显示按钮
+  customJS: "" # 可选，自定义JS地址，如果不配置则为官方CDN(如下三种情况)
+  # # PostChat and Summary: https://ai.tianli0.top/static/public/postChatUser_summary.min.js
+  # # Only PostChat: https://ai.tianli0.top/static/public/postChatUser.min.js
+  # # Only Summary: https://ai.tianli0.top/static/public/tianli_gpt.min.js
 
 ```
 

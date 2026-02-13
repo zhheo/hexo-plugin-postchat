@@ -31,7 +31,7 @@ hexo.extend.filter.register('after_render:html', function (data) {
     enableSummary = true,
     postSelector = "#postchat_postcontent",
     title = "文章摘要",
-    summaryStyle = "https://ai.tianli0.top/static/public/postChatUser_summary.min.css",
+    summaryStyle = "https://ai.zhheo.com/static/public/postChatUser_summary.min.css",
     postURL = "/^https?://[^/]+/[0-9]{4}/[0-9]{2}/[0-9]{2}/",
     blacklist = "",
     wordLimit = "1000",
@@ -56,7 +56,7 @@ hexo.extend.filter.register('after_render:html', function (data) {
     userTitle = "PostChat",
     userDesc = "如果你对网站的内容有任何疑问，可以来问我哦～",
     addButton = true,
-    userIcon = "https://ai.tianli0.top/static/img/PostChat.webp",
+    userIcon = "https://ai.zhheo.com/static/img/PostChat.webp",
     userMode = "magic",
     defaultChatQuestions = ["你好", "你是谁"],
     defaultSearchQuestions = ["视频压缩", "设计"],
@@ -106,11 +106,11 @@ hexo.extend.filter.register('after_render:html', function (data) {
   // 确定插入的JS文件地址
   let scriptSrc;
   if (enableAI && enableSummary) {
-    scriptSrc = "https://ai.tianli0.top/static/public/postChatUser_summary.min.js";
+    scriptSrc = "https://ai.zhheo.com/static/public/postChatUser_summary.min.js";
   } else if (enableAI) {
-    scriptSrc = "https://ai.tianli0.top/static/public/postChatUser.min.js";
+    scriptSrc = "https://ai.zhheo.com/static/public/postChatUser.min.js";
   } else if (enableSummary) {
-    scriptSrc = "https://ai.tianli0.top/static/public/tianli_gpt.min.js";
+    scriptSrc = "https://ai.zhheo.com/static/public/tianli_gpt.min.js";
   } else {
     scriptSrc = "";
   }

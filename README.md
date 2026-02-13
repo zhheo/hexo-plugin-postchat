@@ -1,5 +1,5 @@
 <div align="center">
-    <a href="https://ai.tianli0.top/" target="_blank" rel="noopener noreferrer">
+    <a href="https://ai.zhheo.com/" target="_blank" rel="noopener noreferrer">
         <img src="https://github.com/user-attachments/assets/63202383-660f-421a-aacd-ea01d675f968" alt="icon"/>
     </a>
     <h1 align="center">PostChat</h1>
@@ -21,7 +21,7 @@ PostChat是一个专为中小开发者与站长开发的AI增强工具，可以�
 - 文章知识库对话功能
 - 文章AI搜索功能
 
-更多功能可以参见：https://ai.tianli0.top/
+更多功能可以参见：https://ai.zhheo.com/
 
 ## 本插件在Hexo中的表现
 
@@ -63,12 +63,12 @@ plugins:
 ```yaml
 postchat:
   account:
-    key: "70b649f150276f289d1025508f60c5f58a" # 使用PostChat的用户请前往 https://ai.tianli0.top/ 获取 KEY，只使用文章摘要的用户前往 https://summary.zhheo.com/ 获取 KEY 。示例的Key不支持文章摘要和自定义的知识库问答，但可以使用作者的知识库对话
+    key: "70b649f150276f289d1025508f60c5f58a" # 使用PostChat的用户请前往 https://ai.zhheo.com/ 获取 KEY，只使用文章摘要的用户前往 https://summary.zhheo.com/ 获取 KEY 。示例的Key不支持文章摘要和自定义的知识库问答，但可以使用作者的知识库对话
   summary:
     enableSummary: true # 开启文章摘要需要在 https://summary.zhheo.com/ 绑定你的网站
     postSelector: "#postchat_postcontent" # 文章选择器，用于选择文章内容。如果没有正常显示摘要，你需要访问 https://postsummary.zhheo.com/theme/custom.html#%E8%8E%B7%E5%8F%96tianligpt-postselector 学习获取，也可以联系 zhheo@qq.com 发送你的网站地址后获取
     title: "文章摘要" # 摘要标题，用于显示在摘要顶部的自定义内容
-    summaryStyle: "https://ai.tianli0.top/static/public/postChatUser_summary.min.css" # 摘要样式css地址，如果你需要自定义摘要的css样式，可以自行修改。
+    summaryStyle: "https://ai.zhheo.com/static/public/postChatUser_summary.min.css" # 摘要样式css地址，如果你需要自定义摘要的css样式，可以自行修改。
     postURL: "/^https?://[^/]+/[0-9]{4}/[0-9]{2}/[0-9]{2}/" # 在符合url条件的网页执行文章摘要功能，默认的配置为Hexo的默认文章路由，如果你自定义了文章的地址格式，那么需要修改。https://postchat.zhheo.com/summary.html#tianligpt-posturl
     blacklist: "" # 填写相关的json地址，帮助文档：https://postsummary.zhheo.com/parameters.html#tianligpt-blacklist
     wordLimit: "1000" # 危险操作！如果没有在文章摘要中开启url绑定，更改此变量损失已消耗过的key，因为你提交的内容发生了变化。（PostChat用户无影响，因为摘要数量是无限的）可以设置提交的字数限制，默认为1000字。，帮助文档：https://postsummary.zhheo.com/parameters.html#tianligpt-wordlimit
@@ -91,7 +91,7 @@ postchat:
     showInviteLink: true # 显示邀请链接
     userTitle: "PostChat" # 界面标题
     userDesc: "如果你对网站的内容有任何疑问，可以来问我哦～" # 聊天界面描述
-    userIcon: "https://ai.tianli0.top/static/img/PostChat.webp" # PostChat聊天界面图标，仅在Magic模式下有效
+    userIcon: "https://ai.zhheo.com/static/img/PostChat.webp" # PostChat聊天界面图标，仅在Magic模式下有效
     defaultChatQuestions: ["你好","你是谁"] # 默认聊天问题，仅在Magic模式下有效
     defaultSearchQuestions: ["视频压缩","设计"] # 默认搜索问题，仅在Magic模式下有效
     addButton: true # 是否显示按钮

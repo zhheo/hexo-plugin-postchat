@@ -1,14 +1,14 @@
 <div align="center">
     <a href="https://ai.tianli0.top/" target="_blank" rel="noopener noreferrer">
-        <img src="https://img.zhheo.com/i/2024/06/21/6674f00f3eb9d.webp" alt="icon"/>
+        <img src="https://github.com/user-attachments/assets/63202383-660f-421a-aacd-ea01d675f968" alt="icon"/>
     </a>
     <h1 align="center">PostChat</h1>
-    <span>PostChat的Hexo插件，也支持文章摘要用户使用</span>
+    <span>PostChat的WordPress插件，也支持文章摘要用户使用</span>
 </div>
 
 ## 简介
 
-![quickshot.webp](https://img.zhheo.com/i/2024/06/21/6674f0133b5b3.webp)
+![quickshot.webp](https://github.com/user-attachments/assets/27668d1d-4e29-4692-81ec-e616a7910e7b)
 
 PostChat是一个专为中小开发者与站长开发的AI增强工具，可以在网站中插入聊天机器人和智能摘要生成的功能。本项目提供专为Hexo博客系统的插件安装包，你可以在Hexo博客中安装使用，避免了插入代码的繁琐。
 

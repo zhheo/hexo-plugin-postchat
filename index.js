@@ -37,7 +37,8 @@ hexo.extend.filter.register('after_render:html', function (data) {
     wordLimit = "1000",
     typingAnimate = true,
     beginningText = "这篇文章介绍了",
-    summaryTheme = "default"
+    summaryTheme = "default",
+    podcast = false
   } = summary;
 
   const {
@@ -58,7 +59,9 @@ hexo.extend.filter.register('after_render:html', function (data) {
     userIcon = "https://ai.tianli0.top/static/img/PostChat.webp",
     userMode = "magic",
     defaultChatQuestions = ["你好", "你是谁"],
-    defaultSearchQuestions = ["视频压缩", "设计"]
+    defaultSearchQuestions = ["视频压缩", "设计"],
+    recommend = 0,
+    hotWords = false
   } = chat;
 
   // 插入脚本代码
@@ -73,6 +76,7 @@ hexo.extend.filter.register('after_render:html', function (data) {
         let tianliGPT_wordLimit = '${wordLimit}';
         let tianliGPT_typingAnimate = ${typingAnimate};
         let tianliGPT_theme = '${summaryTheme}';
+        ${podcast ? "let tianliGPT_podcast = true;" : ""}
         var postChatConfig = {
           backgroundColor: "${backgroundColor}",
           bottom: "${bottom}",
@@ -91,7 +95,9 @@ hexo.extend.filter.register('after_render:html', function (data) {
           userIcon: "${userIcon}",
           userMode: "${userMode}",
           defaultChatQuestions: ${JSON.stringify(defaultChatQuestions)},
-          defaultSearchQuestions: ${JSON.stringify(defaultSearchQuestions)}
+          defaultSearchQuestions: ${JSON.stringify(defaultSearchQuestions)},
+          recommend: ${Math.min(10, Math.max(0, parseInt(recommend, 10) || 0))},
+          hotWords: ${hotWords}
         };
     </script>
     <script data-postChat_key="${key}" src="%s"></script>

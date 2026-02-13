@@ -75,6 +75,7 @@ postchat:
     typingAnimate: true # 智能的打字效果，模拟流处理的感觉
     beginningText: "这篇文章介绍了" #自定义开头语，默认为"这篇文章介绍了"
     summaryTheme: "default" #切换文章摘要主题，详情请见 https://postchat.zhheo.com/theme.html
+    podcast: false # 设为 true 时启用 AI 播客功能（文章摘要功能），默认关闭
   chat:
     enableAI: true # 开启PostChat智能对话，添加按钮点击对话的功能，如果你并非PostChat用户，而是仅文章摘要用户，建议关闭此功能
     userMode: "magic" # 用户模式，可选值为"magic"和"iframe"，默认为"magic"
@@ -94,6 +95,8 @@ postchat:
     defaultChatQuestions: ["你好","你是谁"] # 默认聊天问题，仅在Magic模式下有效
     defaultSearchQuestions: ["视频压缩","设计"] # 默认搜索问题，仅在Magic模式下有效
     addButton: true # 是否显示按钮
+    recommend: 0 # 文章底部推荐文章数量，0 为不显示，最大 10，默认关闭
+    hotWords: false # 是否启用热词功能，true 为启用，false 为不启用
 
 ```
 
